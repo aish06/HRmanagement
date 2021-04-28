@@ -11,10 +11,13 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nagarro.models.Employee;
 
+
+
 public class RestCalls 
 {
 	//Rest Template to hit API of Employee Manager
-	static private RestTemplate restTemplate=new RestTemplate();
+	@Autowired
+	static RestTemplate restTemplate;
 	
 	//Hits API to get list of Employees
 	public static List<Employee> getAllEmployees() throws JsonMappingException, JsonProcessingException
